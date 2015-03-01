@@ -7,3 +7,9 @@
 meteor-platform
 autopublish
 insecure
+coffeescript
+accounts-ui
+accounts-github
+twbs:bootstrap
+iron:router
+mquandalle:jade

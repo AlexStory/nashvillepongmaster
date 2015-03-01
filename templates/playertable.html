@@ -1,0 +1,20 @@
+<template name="playertable">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th> Name </th>
+        <th>  Wins </th>
+        <th> Losses </th>
+        <th> ELO </th>
+      </tr>
+    </thead>
+    {{#each players}}
+      <tr>
+        <td> {{name}} </td>
+        <td> {{wins}} </td>
+        <td> {{losses}} </td>
+        <td> {{elo}} </td>
+      </tr>
+      {{/each}}
+  </table>
+</template>
