@@ -10,11 +10,27 @@
     </thead>
     {{#each players}}
       <tr>
-        <td> {{name}} </td>
+        <td class="name"> {{name}} </td>
         <td> {{wins}} </td>
         <td> {{losses}} </td>
         <td> {{elo}} </td>
       </tr>
       {{/each}}
   </table>
+  {{#if currentUser}}
+    <div class="game text-center">
+      <select class="winner">
+        {{#each players}}
+          <option value="{{name}}">{{name}}</option>
+        {{/each}}
+      </select>
+      <strong> Beat: </strong>
+      <select class="loser">
+        {{#each players}}
+          <option value="{{name}}">{{name}}</option>
+        {{/each}}
+      </select>
+      <button class="btn btn-primary makegame">Send</button>
+    </div>
+    {{/if}}
 </template>

@@ -1,6 +1,7 @@
 template(name="layout")
   .container
-    h2.text-center Add a player
-    form.addPlayer.text-center
-      input.playerName(name="playName")
+    if currentUser
+      form.addPlayer.text-center
+        input.playerName(name="playName" placeholder="add player")
+    
     +yield
