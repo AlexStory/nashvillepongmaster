@@ -42,7 +42,7 @@ Template.playertable.events({
       if(diff === 0){
         Players.update(
           {_id: win._id},
-          {$set: {elo: (win.elo + 50)}}
+          {$set: {elo: (win.elo + 55)}}
         );
 
         Players.update(
@@ -52,7 +52,7 @@ Template.playertable.events({
       } else if(diff > 0 && diff < 100) {
         Players.update(
           {_id: win._id},
-          {$set: {elo: (win.elo + 25)}}
+          {$set: {elo: (win.elo + 30)}}
         );
 
         Players.update(
@@ -62,7 +62,7 @@ Template.playertable.events({
       } else if(diff >= 100 ) {
         Players.update(
           {_id: win._id},
-          {$set: {elo: (win.elo + 15)}}
+          {$set: {elo: (win.elo + 20)}}
         );
 
         Players.update(
@@ -72,7 +72,7 @@ Template.playertable.events({
       }else if(diff < 0 && diff > -100) {
         Players.update(
           {_id: win._id},
-          {$set: {elo: (win.elo + 75)}}
+          {$set: {elo: (win.elo + 80)}}
         );
 
         Players.update(
@@ -82,7 +82,7 @@ Template.playertable.events({
       }else if(diff < 100) {
         Players.update(
           {_id: win._id},
-          {$set: {elo: (win.elo + 90)}}
+          {$set: {elo: (win.elo + 95)}}
         );
 
         Players.update(
